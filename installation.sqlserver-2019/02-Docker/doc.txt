@@ -1,0 +1,11 @@
+
+B1: https://mcr.microsoft.com/en-us/artifact/mar/mssql/server/about
+
+B2: Mở Terminal
+- SQLServer
+docker pull mcr.microsoft.com/mssql/server:2019-latest
+
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=your_pw" -p 1433:1433  --name sqlserver --hostname sqlserver -d mcr.microsoft.com/mssql/server:2019-latest
+
+-MySQL
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=your_pw -p 3306:3306 -d mysql:latest
